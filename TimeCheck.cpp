@@ -33,7 +33,7 @@ int start()
 //Allows you to close all trades outside of given range in order to save you from paying overnight fees
 void CloseTime(EndTradeTime)
 {
-   if(TimeCurrent() <= EndTradeTime){
+   if(TimeCurrent() > EndTradeTime){
       if(OrderSelect(ticket, SELECT_BY_TICKET) == true){
          if((OrderType() == OP_BUY)){
             //OrderClose function is (int ticket, double LotSize, Ask/Bid, int slippage, color)
