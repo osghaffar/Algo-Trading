@@ -8,14 +8,13 @@ void CloseTime(int x);
 int start()
 {
    bool AllowTrade = false;
-   datetime TimeOfTrade;
+   datetime TimeOfTrade = TimeCurrent();
    int CurrentHour;
    //set these to whatever time you want
    int StartTradeTime = 0;
    int EndTradeTime = 16;
 
    if (UseTimeLimit == true){
-      TimeOfTrade = TimeCurrent();
       CurrentHour = TimeHour(CurrentHour);
       if (CurrentHour >= StartTradeTime && CurrentHour <= EndTradeTime){
          AllowTrade = true;
