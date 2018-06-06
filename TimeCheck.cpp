@@ -34,17 +34,17 @@ int start()
 void CloseTime(EndTradeTime)
 {
    if(TimeCurrent() <= EndTradeTime){
-      if((OrderType() == OP_BUY)){
-         if(OrderSelect(ticket, SELECT_BY_TICKET) == true){
-            OrderClose(ticket,LotSize,Bid,3,Red);
+      if(OrderSelect(ticket, SELECT_BY_TICKET) == true){
+         if((OrderType() == OP_BUY)){
             //OrderClose function is (int ticket, double LotSize, Ask/Bid, int slippage, color)
             //refer to MT4 documentation
+            OrderClose(ticket,LotSize,Bid,3,Red);
          }
-      }
-      else if (OrderType() == OP_SELL){
-         if(OrderSelect(ticket, SELECT_BY_TICKET) == true){
-            OrderClose(ticket,LotSize,Ask,3,Green);
+         else if (OrderType() == OP_SELL){
+            if(OrderSelect(ticket, SELECT_BY_TICKET) == true){
+               OrderClose(ticket,LotSize,Ask,3,Green);
+            }
          }
-      }
+      } 
    }
 }
