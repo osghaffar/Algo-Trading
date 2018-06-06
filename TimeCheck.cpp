@@ -40,9 +40,7 @@ void CloseTime(EndTradeTime)
             OrderClose(ticket,LotSize,Bid,3,Red);
          }
          else if (OrderType() == OP_SELL){
-            if(OrderSelect(ticket, SELECT_BY_TICKET) == true){
-               OrderClose(ticket,LotSize,Ask,3,Green);
-            }
+            OrderClose(ticket,LotSize,Ask,3,Green);
          }
       } 
    }
