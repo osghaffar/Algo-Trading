@@ -1,5 +1,5 @@
 # Algo-Trading
-#### Algorithmic trading models and expert advisors (trading bots). Will be written in MetaQuotes 4 (C++) or Python
+#### Algorithmic trading models and expert advisors (trading bots). Will be written in MQL 4 (C++) or Python
 -----------------------
 ### TimeCheck
 Since many brokers will charge extra commission on trades held overnight/after market close, it can be useful to have a built-in safety that will both cease making trades when the time is out of market hours, but will also close any rogue trades that are still open.
@@ -11,4 +11,6 @@ If you do want to turn it off, and allow trades overnight/after hours, then simp
 extern bool UseTimeLimit = true;
 ```
 to ```false```. The ```extern``` before any variable allows you to edit it in MT4 itself, and there is no need to edit the code.
+
+---------------------------------------------------------
 
