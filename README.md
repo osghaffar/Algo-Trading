@@ -2,7 +2,7 @@
 #### Algorithmic trading models and expert advisors (trading bots). Will be written in MQL 4 (C++) or Python
 -----------------------
 ### TimeCheck
-Since many brokers will charge extra commission on trades held overnight/after market close, it can be useful to have a built-in safety that will both cease making trades when the time is out of market hours, but will also close any rogue trades that are still open.
+Since many brokers will charge extra commission on trades held overnight/after market close, it can be useful to have a built-in safety in your trading system, that will both cease making trades when the time is out of market hours, but will also close any rogue trades that are still open.
 
 The main idea of this program is the bool ```AllowTrade```, as it can be placed at the beginning of any trading bot and will ensure it only works during the times given. 
 
