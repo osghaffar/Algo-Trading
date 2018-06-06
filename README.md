@@ -1,5 +1,5 @@
 # Algo-Trading
-Algorithmic trading models and expert advisors (trading bots)
+#### Algorithmic trading models and expert advisors (trading bots)
 ============================================================================
 ### TimeCheck
 Since many brokers will charge extra commission on trades held overnight/after market close, it can be useful to have a built-in safety that will both cease making trades when the time is out of market hours, but will also close any rogue trades that are still open.
