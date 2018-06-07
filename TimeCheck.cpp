@@ -16,7 +16,7 @@ int start()
    int EndTradeTime = 16;
 
    if (UseTimeLimit == true){
-      CurrentHour = TimeHour(CurrentHour);
+      CurrentHour = TimeHour(TimeOfTrade);
       if (CurrentHour >= StartTradeTime && CurrentHour <= EndTradeTime){
          AllowTrade = true;
       }
