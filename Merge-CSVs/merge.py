@@ -1,7 +1,7 @@
 import pandas as pd
 
-a = pd.read_csv("/Users/omarghaffar/Documents/Merge-CSVs/EURUSD5.csv")
-b = pd.read_csv("/Users/omarghaffar/Documents/Merge-CSVs/USDCHF5.csv")
+a = pd.read_csv("/Users/Documents/Merge-CSVs/EURUSD5.csv")
+b = pd.read_csv("/Users/Documents/Merge-CSVs/USDCHF5.csv")
 
 #Merge date + time columns into one - easier for pandas to parse datetime later on
 a["Datetime"] = a["Date"] + " " + a["Time"]
