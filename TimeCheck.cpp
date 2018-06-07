@@ -2,6 +2,7 @@
 //CHANGE extension from .cpp to .mt4
 
 extern bool UseTimeLimit = true;
+extern double LotSize = 1.0;
 
 void CloseTime(int x);
 
