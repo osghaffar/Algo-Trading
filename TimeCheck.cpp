@@ -4,7 +4,7 @@
 extern bool UseTimeLimit = true;
 extern double LotSize = 1.0;
 
-void CloseTime(int x);
+void CloseTime(int);
 
 int start()
 {
@@ -31,7 +31,7 @@ int start()
 }
 
 //Allows you to close all trades outside of given range in order to save you from paying overnight fees
-void CloseTime(EndTradeTime)
+void CloseTime(int EndTradeTime)
 {
    if(TimeCurrent() > EndTradeTime){
       if(OrderSelect(ticket, SELECT_BY_TICKET) == true){
