@@ -11,7 +11,7 @@ int start()
    bool AllowTrade = false;
    datetime TimeOfTrade = TimeCurrent();
    int CurrentHour;
-   //set these to whatever time you want - 0 <= hour > 24:00
+   //set these to whatever time you want - 0 <= hour < 24:00
    int StartTradeTime = 0;
    int EndTradeTime = 16;
 
