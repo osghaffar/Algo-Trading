@@ -4,7 +4,7 @@
 extern bool UseTimeLimit = true;
 extern double LotSize = 1.0;
 
-void CloseTime(int);
+void CloseTime(int x);
 
 int start()
 {
