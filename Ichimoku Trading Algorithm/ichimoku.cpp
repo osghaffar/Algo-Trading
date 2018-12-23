@@ -5,11 +5,11 @@
 //|This is free to use however you want to.                          |
 //+------------------------------------------------------------------+
 
-#include "ordertotal.mq4"
+#include "ordercounter.mq4"
 
-extern double LotSize = 0.08;
+//extern allows you to edit this variable in the MT4 environment itself
+extern double LotSize = 0.1;
 
-int order;
 //+------------------------------------------------------------------+
 //| initialization function - runs when bot initializes              |
 //+------------------------------------------------------------------+
@@ -37,6 +37,7 @@ void start()
     double ConversionLine = iIchimoku(NULL, 0, 9, 26, 52, 1, 0);
     double Baseline = iIchimoku(NULL, 0, 9, 26, 52, 2, 0);
     
+    int order;
     int orderclose;
     int OrderTotal1 = TotalOrder(1111);
     int OrderTotal2 = TotalOrder(2222);
