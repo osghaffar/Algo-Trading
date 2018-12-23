@@ -29,6 +29,7 @@ void DeInit()
 //+------------------------------------------------------------------+
 void start()
 {
+    //initialize ticket to 0
     int ticket = 0;
     
     bool buyorder = false;
@@ -39,8 +40,10 @@ void start()
     
     int order;
     int orderclose;
-    int OrderTotal1 = TotalOrder(1111);
-    int OrderTotal2 = TotalOrder(2222);
+   
+    //pass magic numbers of buy + sell orders to order counter to keep track
+    int OrderTotal1 = OrderCounter(1111);
+    int OrderTotal2 = OrderCounter(2222);
     
     
     if((ConversionLine > Baseline) && (OrderTotal1 <= 2)){
