@@ -6,7 +6,7 @@ extern double LotSize = 1.0;
 
 void CloseTime(int x);
 
-int start()
+void start()
 {
    bool AllowTrade = false;
    datetime TimeOfTrade = TimeCurrent();
