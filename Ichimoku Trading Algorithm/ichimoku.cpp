@@ -35,8 +35,8 @@ void start()
     bool buyorder = false;
     bool sellorder = false;
     
-    double ConversionLine = iIchimoku(NULL, 0, 9, 26, 52, 1, 0);
-    double Baseline = iIchimoku(NULL, 0, 9, 26, 52, 2, 0);
+    double conversionLine = iIchimoku(NULL, 0, 9, 26, 52, 1, 0);
+    double baseLine = iIchimoku(NULL, 0, 9, 26, 52, 2, 0);
     
     int order;
     int orderclose;
@@ -46,7 +46,7 @@ void start()
     int OrderTotal2 = OrderCounter(2222);
     
     
-    if((ConversionLine > Baseline) && (OrderTotal1 <= 2)){
+    if((conversionLine > baseLine) && (OrderTotal1 <= 2)){
         // C > B, Open Buy Trades, Close Sell Trades
         ticket = OrderSend(Symbol(),OP_BUY,LotSize,Ask,3,0,0,NULL,1111,0,Green);
         buyorder = true;
@@ -58,7 +58,7 @@ void start()
         }
     }
     
-    if((Baseline > ConversionLine) && (OrderTotal2 <= 2)){
+    if((baseLine > conversionLine) && (OrderTotal2 <= 2)){
         // B > C, Open Sell Trades, Close Buy Trades
         ticket = OrderSend(Symbol(),OP_SELL,LotSize,Bid,3,0,0,NULL,2222,0,Red);
         sellorder = true;
