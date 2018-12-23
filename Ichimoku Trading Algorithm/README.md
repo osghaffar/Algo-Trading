@@ -3,4 +3,4 @@ This is a trading algorithm that uses the Ichimoku Kinko Hyo indicator as its ba
 
 Read this blog post for more details: https://osghaffar.github.io/Ichimoku-Algo-Trading/
 
-![Algorithm for ichimoku trading](https://www.github.com/osghaffar/osghaffar.github.io/images/ichimoku.png "Algorithm for ichimoku trading")
+![Algorithm for ichimoku trading](osghaffar/osghaffar.github.io/images/ichimoku.png "Algorithm for ichimoku trading")
