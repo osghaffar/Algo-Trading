@@ -35,6 +35,10 @@ void start()
     bool buyorder = false;
     bool sellorder = false;
     
+    /*
+    Conversion Line = ((max of last 9 periods) + (min of last 9 periods))/2
+    Base Line = ((max of last 26 periods) + (min of last 26 periods))/2
+    */
     double conversionLine = iIchimoku(NULL, 0, 9, 26, 52, 1, 0);
     double baseLine = iIchimoku(NULL, 0, 9, 26, 52, 2, 0);
     
@@ -45,11 +49,11 @@ void start()
     int OrderTotal1 = OrderCounter(1111);
     int OrderTotal2 = OrderCounter(2222);
     
-    
     if((conversionLine > baseLine) && (OrderTotal1 <= 2)){
         // C > B, Open Buy Trades, Close Sell Trades
         ticket = OrderSend(Symbol(),OP_BUY,LotSize,Ask,3,0,0,NULL,1111,0,Green);
         buyorder = true;
+        //for loop checks for sell orders and closes them
         for(int c = 0; c < OrdersTotal(); c++){
             order = OrderSelect(c, SELECT_BY_POS);
             if(OrderType() == OP_SELL){
@@ -62,6 +66,7 @@ void start()
         // B > C, Open Sell Trades, Close Buy Trades
         ticket = OrderSend(Symbol(),OP_SELL,LotSize,Bid,3,0,0,NULL,2222,0,Red);
         sellorder = true;
+        //for loop checks for buy orders and closes them
         for(int c = 0; c < OrdersTotal(); c++){
             order = OrderSelect(c, SELECT_BY_POS);
             if(OrderType() == OP_BUY){
