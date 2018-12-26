@@ -3,12 +3,12 @@
 //you assign which allows it to be identified. It's best to have a diff
 //magic number for buy orders and sell orders.
 
-double OrderCounter(int magic_number)
+int OrderCounter(int magic_number)
 {    
     //we pass in the order's magic number and then use a basic for loop to
     //keep track of the number of trades.
     
-    double totalOrders = 0;
+    int totalOrders = 0;
     
     for(int count = 0; count < OrdersTotal(); count++){
         OrderSelect(count, SELECT_BY_POS, MODE_TRADES);
