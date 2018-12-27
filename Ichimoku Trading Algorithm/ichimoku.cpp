@@ -35,9 +35,6 @@ void start()
     //initialize ticket to 0
     int ticket = 0;
     
-    bool buyorder = false;
-    bool sellorder = false;
-    
     //statically allocate the arrays since we know how many elements
     double convline[9];
     double baseline[26];
@@ -78,7 +75,6 @@ void start()
     if((conversionLine > baseLine) && (OrderTotal1 <= 2)){
         // C > B, Open Buy Trades, Close Sell Trades
         ticket = OrderSend(Symbol(),OP_BUY,LotSize,Ask,3,0,0,NULL,1111,0,Green);
-        buyorder = true;
         //for loop checks for sell orders and closes them
         for(int c = 0; c < OrdersTotal(); c++){
             order = OrderSelect(c, SELECT_BY_POS);
@@ -91,7 +87,6 @@ void start()
     if((baseLine > conversionLine) && (OrderTotal2 <= 2)){
         // B > C, Open Sell Trades, Close Buy Trades
         ticket = OrderSend(Symbol(),OP_SELL,LotSize,Bid,3,0,0,NULL,2222,0,Red);
-        sellorder = true;
         //for loop checks for buy orders and closes them
         for(int c = 0; c < OrdersTotal(); c++){
             order = OrderSelect(c, SELECT_BY_POS);
