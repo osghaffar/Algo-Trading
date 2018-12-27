@@ -32,8 +32,14 @@ void DeInit()
 //+------------------------------------------------------------------+
 void start()
 {
-    //initialize ticket to 0
+    //initialize ticket to 0 and define other variables
     int ticket = 0;
+    int order;
+    int orderclose;
+    
+    //pass magic numbers of buy + sell orders to order counter to keep track
+    int OrderTotal1 = OrderCounter(1111);
+    int OrderTotal2 = OrderCounter(2222);
     
     //statically allocate the arrays since we know how many elements
     double convline[9];
@@ -64,13 +70,6 @@ void start()
     double conversionLine = iIchimoku(NULL, 0, 9, 26, 52, 1, 0);
     double baseLine = iIchimoku(NULL, 0, 9, 26, 52, 2, 0);
     */
-    
-    int order;
-    int orderclose;
-    
-    //pass magic numbers of buy + sell orders to order counter to keep track
-    int OrderTotal1 = OrderCounter(1111);
-    int OrderTotal2 = OrderCounter(2222);
     
     if((conversionLine > baseLine) && (OrderTotal1 <= 2)){
         // C > B, Open Buy Trades, Close Sell Trades
