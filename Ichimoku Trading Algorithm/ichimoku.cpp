@@ -1,10 +1,11 @@
 //+------------------------------------------------------------------+
 //|ichimoku.mq4                                                      |
 //|By Omar Ghaffar                                                   |
-//|www.github.com/osghaffar                                          |
+//|https://github.com/osghaffar                                      |
 //|This is free to use however you want to.                          |
 //+------------------------------------------------------------------+
 
+//include our counter function
 #include "ordercounter.mq4"
 
 //extern allows you to edit this variable in the MT4 environment itself
