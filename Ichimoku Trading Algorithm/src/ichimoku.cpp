@@ -1,7 +1,7 @@
 //+------------------------------------------------------------------+
 //|ichimoku.mq4                                                      |
 //|By Omar Ghaffar                                                   |
-//|www.github.com/osghaffar                                          |
+//|github.com/osghaffar                                          |
 //|This is free to use however you want to.                          |
 //+------------------------------------------------------------------+
 
