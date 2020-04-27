@@ -29,30 +29,21 @@ void start(){
    if(GetHour == endOfConsolidationPeriod){
       endOfPeriodFound = true;
    }
+     
    bool startOfTradingPeriodFound = false;
    if(GetHour >= beginTime){
       startOfTradingPeriodFound = true;
    }
 
    if(endOfPeriodFound = true){
-      drawShape();
-      //draw rectangle (name, object, currentchart, left edge, top edge, right edge, bottom edge)
-      ObjectCreate("Rectangle", OBJ_RECTANGLE, 0, Time[0], High[tokyoHigh], Time[11], Low[tokyoLow]);
-      ObjectSet("Rectangle",OBJPROP_COLOR,clrLightGray);
+      drawShape(periodHighest, periodLowest);
    }
       
    if(startOfTradingPeriodFound == true){
       double AskCP = MarketInfo(Symbol(), MODE_ASK);
       double BidCP = MarketInfo(Symbol(), MODE_BID);
       
-      drawLines();
-      //draw lines, top and bottom
-      ObjectCreate("hLine",OBJ_TREND,0,Time[11],buyThreshold,Time[0],buyThreshold);
-      ObjectCreate("lLine",OBJ_TREND,0,Time[11],sellThreshold,Time[0],sellThreshold);
-      
-      //dont make them extend all the way across the screen, i.e not rays
-      ObjectSet("hLine", OBJPROP_RAY,false);
-      ObjectSet("lLine", OBJPROP_RAY,false);
+      drawLines(periodHighest, periodLowest);
       
       Comment("Buy threshold: ", Symbol(), periodHighest, " || Sell Threshold : ", Symbol(), periodLowest, " || Current Bid/Ask : ", BidCP, AskCP);
       
