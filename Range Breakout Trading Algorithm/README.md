@@ -9,7 +9,7 @@ Here is the basic algorithm:
 ![Algorithm for range trading](https://github.com/osghaffar/osghaffar.github.io/blob/master/images/breakout-algo.png "Algorithm for range trading")
 
 
-Here is the algorithm in action, with a profitable trade taken after a breakout:
+Here is the algorithm in action, with a profitable trade taken after a breakout. The blue marker represents the entry (just beyond the range set) and the yellow marker represents the profit successfully taken:
 
 ![Breakout trade](https://github.com/osghaffar/osghaffar.github.io/blob/master/images/breakout-trade.png "Breakout trade")
 
