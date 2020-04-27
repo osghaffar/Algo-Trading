@@ -1,4 +1,5 @@
 void drawLines(double periodHighest, double periodLowest){
+   
    //draw lines, top and bottom
    ObjectCreate("hLine",OBJ_TREND,0,Time[11],periodHighest,Time[0],periodHighest);
    ObjectCreate("lLine",OBJ_TREND,0,Time[11],periodLowest,Time[0],periodLowest);
