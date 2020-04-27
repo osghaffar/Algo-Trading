@@ -6,7 +6,9 @@ The aim of this algorithm is to create a template algorithm, designed not to be 
 
 Here is the basic algorithm:
 
+![Algorithm for range trading](https://github.com/osghaffar/osghaffar.github.io/blob/master/images/breakout-algo.png "Algorithm for range trading")
 
 
 Here is the algorithm in action, with a profitable trade taken after a breakout:
 
+![Breakout trade](https://github.com/osghaffar/osghaffar.github.io/blob/master/images/breakout-trade.png "Breakout trade")
