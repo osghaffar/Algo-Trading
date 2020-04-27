@@ -12,3 +12,8 @@ Here is the basic algorithm:
 Here is the algorithm in action, with a profitable trade taken after a breakout:
 
 ![Breakout trade](https://github.com/osghaffar/osghaffar.github.io/blob/master/images/breakout-trade.png "Breakout trade")
+
+Areas of possible improvement/further research:
+- adjusting the profit/loss levels based on optimized backtests
+- creating a threshold beyond just the high and the low (the market often retests a high/low, this doesn't necessarily result in a breakout)
+- adding additional volume analysis to help predict a breakout
