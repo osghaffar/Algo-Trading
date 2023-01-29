@@ -1,8 +1,7 @@
 //+------------------------------------------------------------------+
 //|ichimoku.mq4                                                      |
-//|By Omar Ghaffar                                                   |
-//|github.com/osghaffar                                          |
-//|This is free to use however you want to.                          |
+//|github.com/osghaffar                                              |
+//|This is free to use.                                              |
 //+------------------------------------------------------------------+
 
 //include our counter function
